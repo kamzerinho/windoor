@@ -1,4 +1,4 @@
-import {Navbar as Nav, NavbarBrand as NavBrand, NavbarContent as NavContent, NavbarItem as NavItem} from "@heroui/Navbar";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@heroui/navbar";
 import {Link} from "@heroui/link";
 import {Button} from "@heroui/button";
 
@@ -15,9 +15,9 @@ export const AcmeLogo = () => {
   );
 };
 
-export default function Navbar() {
+export default function Navbarbar() {
   return (
-    <Nav
+    <Navbar
       classNames={{
         item: [
           "flex",
@@ -35,37 +35,37 @@ export default function Navbar() {
         ],
       }}
     >
-      <NavBrand>
+      <NavbarBrand>
         <AcmeLogo />
         <p className="font-bold text-inherit">ACME</p>
-      </NavBrand>
-      <NavContent className="hidden sm:flex gap-4" justify="center">
-        <NavItem>
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
           <Link color="foreground" href="#">
             Features
           </Link>
-        </NavItem>
-        <NavItem isActive>
+        </NavbarItem>
+        <NavbarItem isActive>
           <Link aria-current="page" href="#">
             Customers
           </Link>
-        </NavItem>
-        <NavItem>
+        </NavbarItem>
+        <NavbarItem>
           <Link color="foreground" href="#">
             Integrations
           </Link>
-        </NavItem>
-      </NavContent>
-      <NavContent justify="end">
-        <NavItem className="hidden lg:flex">
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
-        </NavItem>
-        <NavItem>
+        </NavbarItem>
+        <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
             Sign Up
           </Button>
-        </NavItem>
-      </NavContent>
-    </Nav>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
   );
 }
