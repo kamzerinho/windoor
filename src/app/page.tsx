@@ -1,4 +1,7 @@
 import Hero from '@/components/Hero';
+import WhyUsSection from '@/components/WhyUsSection';
+import ServicesSection from '@/components/ServicesSection';
+
 
 export default function HomePage() {
   return (
@@ -8,13 +11,8 @@ export default function HomePage() {
         subtitle="Fenster und Türen vom Hersteller für Ihr Haus oder ein Büro"
         backgroundImage="/background-image.jpg" 
       />
-
-      <div className="flex">
-        <span>Warum sollten Sie uns wählen?</span>
-        <h2></h2>
-        <div> <p></p></div>
-        <div> <p></p></div>
-      </div>
+      <WhyUsSection />
+      <ServicesSection />
       </> 
   );
 }
