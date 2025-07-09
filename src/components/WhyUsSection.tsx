@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function WhyUsSection() {
   return (
     <section className="bg-stone-950 text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-50">
         <h2 className="uppercase text-sm text-gray-400 mb-2 tracking-widest">
           WARUM SOLLTEN SIE UNS WÄHLEN?
         </h2>

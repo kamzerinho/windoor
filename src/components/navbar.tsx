@@ -8,12 +8,12 @@ export default function Navbar() {
 
 
   return (
-    <nav className="flex items-center justify-around px-6 py-4 bg-dark shadow-md">
+    <nav className="flex items-center justify-between py-4 bg-dark shadow-md container mx-auto">
       <Link href="home" className="">
-        <p className="flex flex-col text-center text-2xl text-white font-bold">WinDoor<span>Vision</span></p>
+        <p className="flex flex-col text-center text-2xl text-white font-medium leading-6">WinDoor<span>Vision</span></p>
       </Link>
 
-      <ul className="flex items-center space-x-6 text-white-700 transition ease-in">
+      <ul className="flex items-center space-x-15 text-white-700 transition ease-in">
       <li className="relative">
         
           <button

@@ -6,7 +6,7 @@ export default function Navbarfooter() {
 
 
   return (
-    <nav className="px-6 py-4 bg-dark">
+    <nav className="py-4 bg-dark">
 
 
       <ul className="flex items-center space-x-6 text-white-700 transition ease-in">

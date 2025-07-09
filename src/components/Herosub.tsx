@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 
-import {Button} from "@heroui/button";
 
 
 interface HeroProps {
@@ -11,7 +10,7 @@ interface HeroProps {
   backgroundImage: string;
 }
 
-export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
+export default function Herosub({ title, subtitle, backgroundImage }: HeroProps) {
   return (
     <section className="relative h-[55vh] w-full overflow-hidden">
       <Image
@@ -25,7 +24,6 @@ export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
       <div className="absolute container mx-auto inset-0 flex flex-col justify-center text-white text-left">
         <h1 className="text-2xl md:text-4xl font-bold mb-4 text-left">{title}</h1>
         <p className="text-lg md:text-xl max-w-2xl text-left">{subtitle}</p>
-        <div><Button className="bg-black px-[20px] py-[10px] border rounded-lg mt-5 hover:text-black hover:bg-white hover:border-color-black cursor-pointer transition ease-in" size="md">Angebot Prüfen</Button></div>
       </div>
     </section>
   );
