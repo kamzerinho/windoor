@@ -3,7 +3,12 @@ import Image from 'next/image';
 
 export default function ContactSection() {
   return (
-    <section className="bg-stone-950 text-white py-20 px-6">
+    <>
+     <div className="container mx-auto text-center flex justify-center my-10">
+      <p className="text-3xl w-1/4">Wenn Sie Fragen haben, 
+kontaktieren Sie uns bitte. </p></div>
+    <section className="bg-stone-950 text-white pb-20 px-6">
+     
       <div className="max-w-3xl mx-auto grid md:grid-cols-2 items-center">
         <Image
           src="/box-contact.jpg"
@@ -62,5 +67,6 @@ export default function ContactSection() {
         </form>
       </div>
     </section>
+    </>
   );
 }
