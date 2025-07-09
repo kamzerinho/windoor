@@ -22,7 +22,7 @@ export default function Navbar() {
            
             className="hover:text-gray-400 transition-colors focus:outline-none"
           >
-          <Link href="angebot" className="">  Angebot▾</Link>
+          <Link href="/angebot" className="">  Angebot▾</Link>
           </button>
        
           {isDropdownOpen && (
@@ -64,12 +64,12 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/" className="hover:text-gray-600 transition-colors">
-            Home
+            Über
           </Link>
         </li>
         <li>
           <Link href="/about" className="hover:text-gray-600 transition-colors">
-            About
+            Informationen
           </Link>
         </li>
       </ul>
