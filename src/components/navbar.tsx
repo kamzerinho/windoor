@@ -45,7 +45,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href="/angebot/aluminiumfenster"
+                  href="/angebot/schiebeturen"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
                 >
                   Schiebetüren
@@ -53,7 +53,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href="/angebot/aluminiumfenster"
+                  href="/angebot/hausturen"
                   className="block px-4 py-2 hover:bg-white hover:text-black rounded-b-lg"
                 >
                   Haustüren
@@ -63,13 +63,8 @@ export default function Navbar() {
           )}
         </li>
         <li>
-          <Link href="/" className="hover:text-gray-600 transition-colors">
+          <Link href="/uber" className="hover:text-gray-600 transition-colors">
             Über
-          </Link>
-        </li>
-        <li>
-          <Link href="/about" className="hover:text-gray-600 transition-colors">
-            Informationen
           </Link>
         </li>
       </ul>
