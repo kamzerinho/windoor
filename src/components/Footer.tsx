@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-white text-black py-6">
       <div className="flex container mx-auto justify-between items-center">
-              <Link href="home" className="">
+              <Link href="/" className="">
         <p className="text-2xl font-bold">WinDoor<span>Vision</span></p>
       </Link>
     <Navbarfooter></Navbarfooter></div>
