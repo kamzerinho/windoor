@@ -24,7 +24,7 @@ export default function Kunststofffenster() {
 			/>
 			<section>
 				<div className="bg-white py-10 text-black">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<div>
 							<p className="text-2xl py-10">Einführung in Kunststofffenster</p>
 							<p className="mb-5">
@@ -102,7 +102,7 @@ export default function Kunststofffenster() {
 					</div>
 				</div>
 				<div className="py-5">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<p className="text-2xl py-5">Warum Kunststofffenster kaufen?</p>
 						<p className="py-5">
 							Kunststofffenster haben eine Reihe von Vorteilen, die sie zu einer
@@ -138,7 +138,7 @@ export default function Kunststofffenster() {
 					</div>
 				</div>
 				<div className="bg-white py-10 text-black">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<div>
 							<p className="text-2xl py-10">
 								Kunststofffenster Preise: Was beeinflusst die Kosten?

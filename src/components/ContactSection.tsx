@@ -4,8 +4,8 @@ import Image from 'next/image';
 export default function ContactSection() {
   return (
     <>
-     <div className="container mx-auto text-center flex justify-center my-10">
-      <p className="text-3xl w-1/4">Wenn Sie Fragen haben, 
+     <div className="bg-black container mx-auto text-center flex justify-center py-10">
+      <p className="text-3xl md:w-1/4">Wenn Sie Fragen haben, 
 kontaktieren Sie uns bitte. </p></div>
     <section className="bg-stone-950 text-white pb-20 px-6">
      
@@ -15,7 +15,7 @@ kontaktieren Sie uns bitte. </p></div>
           alt="Kontaktbild"
           width={516}
           height={372}
-          className="rounded-xl w-[15vw]"
+          className="rounded-xl md:w-[15vw] max-sm:py-5"
         />
 
         <form

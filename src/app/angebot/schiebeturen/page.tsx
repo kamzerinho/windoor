@@ -24,7 +24,7 @@ export default function Schiebeturen() {
 			/>
 			<section>
 				<div className="bg-white py-10 text-black">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<div>
 							<p className="text-2xl py-10">
 								Schiebetüren – Funktionalität und Eleganz für jeden Raum
@@ -99,7 +99,7 @@ export default function Schiebeturen() {
 					</div>
 				</div>
 				<div className="py-5">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<p className="text-2xl py-5">
 							Warum Sie sich für Schiebetüren entscheiden sollten
 						</p>
@@ -132,7 +132,7 @@ export default function Schiebeturen() {
 					</div>
 				</div>
 				<div className="bg-white py-10 text-black">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<div>
 							<p className="text-2xl py-10">
 								Verschiedene Arten von Schiebetüren

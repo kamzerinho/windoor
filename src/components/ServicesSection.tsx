@@ -10,7 +10,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="bg-white py-20  text-black">
-      <div className="container mx-auto px-50">
+      <div className="container mx-auto md:px-50">
         <h2 className="uppercase text-sm text-center text-black tracking-widest mb-2">
           WAS WIR ANBIETEN
         </h2>

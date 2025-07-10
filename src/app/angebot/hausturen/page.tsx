@@ -23,7 +23,7 @@ export default function Hausturen() {
 			/>
 			<section>
 				<div className="bg-white py-10 text-black">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<div>
 							<p className="text-2xl py-10">
 								Hochwertige Hauseingangstüren – Stil und Sicherheit für Ihr
@@ -69,7 +69,7 @@ export default function Hausturen() {
 				</div>
 
 				<div className="bg-white py-10 text-black">
-					<div className="container mx-auto px-50">
+					<div className="container mx-auto md:px-50 max-sm:px-5">
 						<div>
 							<p className="text-2xl py-5">
 								Arten von Hauseingangstüren: PVC, Aluminium und Holz

@@ -8,7 +8,7 @@ export default function Navbar() {
 
 
   return (
-    <nav className="flex items-center justify-between py-4 bg-dark shadow-md container mx-auto">
+    <nav className="flex items-center justify-between py-4 bg-dark shadow-md container mx-auto max-sm:p-5">
       <Link href="/" className="">
         <p className="flex flex-col text-center text-2xl text-white font-medium leading-6">WinDoor<span>Vision</span></p>
       </Link>
