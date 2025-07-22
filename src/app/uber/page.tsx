@@ -1,5 +1,4 @@
 import Herosub from "@/components/Herosub"
-import { Mail , Phone , MapPin } from "@deemlol/next-icons"
 
 export default function Angebot() {
 	return (
@@ -25,11 +24,11 @@ export default function Angebot() {
               </div>
 						<div className="text-black text-lg md:text-2xl flex flex-col justify-center max-sm:px-5">
 							<div className="flex flex-row gap-2 items-center py-2">
-								<Mail size={48} color="#000000" />
+								<img src="/mail-open-minus-svgrepo-com.svg" alt="mail" className="w-10 h-10" />
 								<p className="">sales@windoorvision.eu</p>
 							</div>
-              <div className="flex flex-row gap-2 items-center py-2"><Phone size={48} color="#000000" /><p className="">+48 502 024 998</p></div>
-              <div className="flex flex-row gap-2 items-center py-2"><MapPin size={48} color="#000000" /><p className="">ul. Lipowa 329, 123-45 Białystok</p></div>
+              <div className="flex flex-row gap-2 items-center py-2"><img src="/phone-call-svgrepo-com.svg" alt="phone" className="w-10 h-10" /><p className="">+48 502 024 998</p></div>
+              <div className="flex flex-row gap-2 items-center py-2"><img src="/address-svgrepo-com.svg" alt="pin" className="w-10 h-10" /><p className="">ul. Lipowa 329, 123-45 Białystok</p></div>
 						</div>
 					</div>
 				</div>
