@@ -3,8 +3,6 @@ import ProductLayout from '@/components/ProductLayout';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-type PageProps = { params: { category: string; productId: string } };
-
 export async function generateStaticParams() {
   return products.map((product: Product) => ({
     category: product.category,
@@ -12,7 +10,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProductPage({ params }: PageProps) {
+export default function ProductPage({
+  params,
+}: {
+  params: { category: string; productId: string }
+}) {
   const product = products.find(
     p => p.id === params.productId && p.category === params.category
   );
