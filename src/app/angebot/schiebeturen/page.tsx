@@ -5,6 +5,7 @@ import ProductsGrid from "@/components/ProductsGrid"
 import ContactSection from "@/components/ContactSection"
 import WarumProductSection from "@/components/WarumProductSection"
 import {Accordion, AccordionItem} from "@heroui/accordion"
+import { products } from '@/data/products';
 
 export default function Schiebeturen() {
 	const defaultContent = [
@@ -14,6 +15,9 @@ export default function Schiebeturen() {
 		"Ein Schiebetür-Komplettset enthält alle notwendigen Teile für die Installation, einschließlich Tür, Schiene und Beschläge. Diese Sets erleichtern die Montage und bieten eine sofort einsatzbereite Lösung. Komplettsets sind in verschiedenen Materialien und Designs erhältlich, sodass sie sich an diverse Raumstile – ob für Wohnzimmer, Küche oder Badezimmer – anpassen lassen.",
 		"Schiebetüren sind im Allgemeinen wartungsarm. Regelmäßige Reinigung der Schiene und gelegentliches Schmieren der Beschläge sorgen für ein dauerhaft leichtgängiges Gleiten. Insbesondere bei Glasschiebetüren und Aluminium-Modellen reicht eine einfache Reinigung, um sie jahrelang in einwandfreiem Zustand zu halten.",
 	]
+
+	// Filter products for schiebeturen (example: by title or id prefix)
+	const slidingProducts = products.filter(p => p.category === 'schiebeturen');
 
 	return (
 		<>
@@ -57,44 +61,15 @@ export default function Schiebeturen() {
 						</h2>
 
 						<div className="grid md:grid-cols-3 gap-6">
-							<ProductsGrid
-								imageSrc="/aliplast-modernslide.png"
-								title="ALIPLAST"
-								subtitle="Modern Slide"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aliplast-monorail.png"
-								title="ALIPLAST"
-								subtitle="Monorail"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aliplast-ultraglide.png"
-								title="ALIPLAST"
-								subtitle="Ultraglide"
-								link="#"
-							/>
-						</div>
-						<div className="grid md:grid-cols-3 gap-6">
-							<ProductsGrid
-								imageSrc="/aliplast-ultraglidethermo.png"
-								title="ALIPLAST"
-								subtitle="Ultraglide Thermo"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-hst85mm.png"
-								title="ALUPLAST"
-								subtitle="HST 85 mm"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-smartslide.png"
-								title="ALUPLAST"
-								subtitle="Smart Slide"
-								link="#"
-							/>
+							{slidingProducts.map(product => (
+								<ProductsGrid
+									key={product.id}
+									imageSrc={product.image}
+									title={product.title}
+									subtitle={product.subtitle}
+									link={`/angebot/${product.category}/${product.id}`}
+								/>
+							))}
 						</div>
 					</div>
 				</div>

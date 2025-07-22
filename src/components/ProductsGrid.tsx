@@ -19,14 +19,16 @@ export default function ProductsGrid({ imageSrc, title, subtitle, link }: Props)
 					
 						<div
 							className="border border-gray-200 py-[5px] px-5 my-5 rounded-lg hover:shadow-lg transition flex flex-col justify-around items-center text-center">
-                                <div className="transition hover:scale-110 duration-500"><Image
-                                          src={imageSrc}
-                                          alt={title}
-                                          width={600}
-                                          height={400}
-                                          className="w-full h-auto object-cover"
-                                        objectFit="cover"
-                                        /></div>
+                                <div className="w-80 h-60 flex items-center justify-center bg-white transition hover:scale-110 duration-500 rounded">
+  <Image
+    src={imageSrc}
+    alt={title}
+    width={320}
+    height={240}
+    className="max-w-full max-h-full object-contain"
+    objectFit="contain"
+  />
+</div>
 							<h3 className="text-lg m-[10px] text-gray-800">
 								{title}
 							</h3>

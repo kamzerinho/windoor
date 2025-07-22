@@ -5,6 +5,7 @@ import ProductsGrid from "@/components/ProductsGrid"
 import ContactSection from "@/components/ContactSection"
 import WarumProductSection from "@/components/WarumProductSection"
 import {Accordion, AccordionItem} from "@heroui/accordion"
+import { products } from '@/data/products';
 
 export default function Kunststofffenster() {
 	const defaultContent = [
@@ -14,6 +15,9 @@ export default function Kunststofffenster() {
 		"Ja, PVC ist recyclebar und die Energieeffizienz von Kunststofffenstern reduziert den Energieverbrauch, was zu einer geringeren CO₂-Bilanz führt.",
 		"Bei WinDoorVision finden Sie Kunststoff-Fenstermodelle von den besten Lieferanten in Europa. Zu niedrigen Preisen können Sie verschiedene Modelle kaufen, die Ihnen lange Zeit dienen werden."
 	]
+
+	// Filter products for kunststoffenster (example: by title or id prefix)
+	const pvcProducts = products.filter(p => p.category === 'kunststoffenster');
 
 	return (
 		<>
@@ -60,44 +64,15 @@ export default function Kunststofffenster() {
 						</h2>
 
 						<div className="grid md:grid-cols-3 gap-6">
-							<ProductsGrid
-								imageSrc="/aluplast-box.png"
-								title="ALUPLAST"
-								subtitle="Renovation"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-ideal4000.png"
-								title="ALUPLAST"
-								subtitle="Ideal 4000"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-ideal5000.png"
-								title="ALUPLAST"
-								subtitle="Ideal 5000"
-								link="#"
-							/>
-						</div>
-						<div className="grid md:grid-cols-3 gap-6">
-							<ProductsGrid
-								imageSrc="/aluplast-7000.png"
-								title="ALUPLAST"
-								subtitle="Ideal 7000"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-ideal8000.png"
-								title="ALUPLAST"
-								subtitle="Ideal 8000"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-energeto8000.png"
-								title="ALUPLAST"
-								subtitle="Energeto 8000"
-								link="#"
-							/>
+							{pvcProducts.map(product => (
+								<ProductsGrid
+									key={product.id}
+									imageSrc={product.image}
+									title={product.title}
+									subtitle={product.subtitle}
+									link={`/angebot/${product.category}/${product.id}`}
+								/>
+							))}
 						</div>
 					</div>
 				</div>

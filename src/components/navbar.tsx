@@ -63,6 +63,16 @@ export default function Navbar() {
           )}
         </li>
         <li>
+          <Link href="/informationen" className="hover:text-gray-600 transition-colors">
+            Informationen
+          </Link>
+        </li>
+        <li>
+          <Link href="/fenstertyp" className="hover:text-gray-600 transition-colors">
+            Fenstertyp
+          </Link>
+        </li>
+        <li>
           <Link href="/uber" className="hover:text-gray-600 transition-colors">
             Über
           </Link>

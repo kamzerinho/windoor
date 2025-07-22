@@ -4,6 +4,7 @@ import Herosub from "@/components/Herosub"
 import ProductsGrid from "@/components/ProductsGrid"
 import ContactSection from "@/components/ContactSection"
 import {Accordion, AccordionItem} from "@heroui/accordion"
+import { products } from '@/data/products';
 
 export default function Hausturen() {
 	const defaultContent = [
@@ -13,6 +14,9 @@ export default function Hausturen() {
 		"Holz- und PVC-Haustüren bieten generell bessere Wärmedämmungseigenschaften als Aluminium. Aluminiumtüren lassen sich jedoch oft mit zusätzlichen Isolierschichten versehen, um ihre Dämmleistung zu verbessern. Für maximale Energieeffizienz sind Türen mit mehrfacher Verglasung und hochwertigen Dichtungen empfehlenswert.",
 		"Die Lebensdauer einer Haustür hängt vom Material und der Pflege ab. PVC-Türen halten bei guter Pflege etwa 20 bis 30 Jahre, Aluminiumtüren können 40 Jahre oder länger halten, und Holztüren erreichen bei regelmäßiger Wartung ebenfalls eine lange Lebensdauer.",
 	]
+
+	// Filter products for hausturen (example: by title or id prefix)
+	const doorProducts = products.filter(p => p.category === 'hausturen');
 
 	return (
 		<>
@@ -46,24 +50,15 @@ export default function Hausturen() {
 						</h2>
 
 						<div className="grid md:grid-cols-3 gap-6">
-							<ProductsGrid
-								imageSrc="/aluplast-paneeltur.png"
-								title="ALUPLAST"
-								subtitle="Paneel-Tür"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-eingangstur85mm.png"
-								title="ALUPLAST"
-								subtitle="Eingangstür 85 mm"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aluplast-eingangstur70mm.png"
-								title="ALUPLAST"
-								subtitle="Eingangstür 70 mm"
-								link="#"
-							/>
+							{doorProducts.map(product => (
+								<ProductsGrid
+									key={product.id}
+									imageSrc={product.image}
+									title={product.title}
+									subtitle={product.subtitle}
+									link={`/angebot/${product.category}/${product.id}`}
+								/>
+							))}
 						</div>
 					</div>
 				</div>

@@ -5,6 +5,7 @@ import ProductsGrid from "@/components/ProductsGrid"
 import ContactSection from "@/components/ContactSection"
 import WarumProductSection from "@/components/WarumProductSection"
 import {Accordion, AccordionItem} from "@heroui/accordion"
+import { products } from '@/data/products';
 
 export default function Aluminiumfenster() {
 	const defaultContent = [
@@ -14,6 +15,9 @@ export default function Aluminiumfenster() {
 		"Der Preisunterschied ergibt sich aus der Materialqualität, zusätzlichen Beschichtungen und möglichen Extras wie Sicherheits- oder Schallschutzverglasungen. Zudem erfordern Aluminiumfenster oft spezielle Montagemethoden.",
 		"Aluminiumfenster bieten eine Reihe von Vorteilen gegenüber Kunststofffenstern, wie z. B. Langlebigkeit und Wartungsfreundlichkeit, sind jedoch in Bezug auf die Energieeffizienz den Kunststofffenstern unterlegen, was sie zu einer attraktiveren Option für Wohngebäude macht",
 	]
+
+	// Filter products for aluminiumfenster (example: by title or id prefix)
+	const aluminiumProducts = products.filter(p => p.category === 'aluminiumfenster');
 
 	return (
 		<>
@@ -57,44 +61,15 @@ export default function Aluminiumfenster() {
 						</h2>
 
 						<div className="grid md:grid-cols-3 gap-6">
-							<ProductsGrid
-								imageSrc="/aliplast-maxlight-min.png"
-								title="ALIPLAST"
-								subtitle="Max Light"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aliplast-steelook-min.png"
-								title="ALIPLAST"
-								subtitle="Steel Look"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aliplast-ecofunural-min.png"
-								title="ALIPLAST"
-								subtitle="Ecofutural"
-								link="#"
-							/>
-						</div>
-						<div className="grid md:grid-cols-3 gap-6">
-							<ProductsGrid
-								imageSrc="/aliplast-superial-min.png"
-								title="ALIPLAST"
-								subtitle="Superial"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aliplast-genesis75-min.png"
-								title="ALIPLAST"
-								subtitle="Genesis 75"
-								link="#"
-							/>
-							<ProductsGrid
-								imageSrc="/aliplast-star-min.png"
-								title="ALIPLAST"
-								subtitle="Star"
-								link="#"
-							/>
+							{aluminiumProducts.map(product => (
+								<ProductsGrid
+									key={product.id}
+									imageSrc={product.image}
+									title={product.title}
+									subtitle={product.subtitle}
+									link={`/angebot/${product.category}/${product.id}`}
+								/>
+							))}
 						</div>
 					</div>
 				</div>
