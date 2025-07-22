@@ -72,7 +72,7 @@ export default function FenstertypPage() {
           <label htmlFor="model-select" className="mb-2 text-lg text-black font-semibold">Wählen Sie ein Fenster-Modell:</label>
           <select
             id="model-select"
-            className="border border-gray-300 rounded px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-stone-950"
+            className="border text-stone-950 border-gray-300 rounded px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-stone-950"
             value={selectedModel.name}
             onChange={e => {
               const found = windowModels.find(m => m.name === e.target.value);

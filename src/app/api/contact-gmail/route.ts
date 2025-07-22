@@ -21,7 +21,10 @@ export async function POST(req: NextRequest) {
       text: `E-Mail: ${email}\nTelefon: ${phone}\nNachricht: ${message}`,
     });
     return NextResponse.json({ ok: true });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch (err) {
+    if (err instanceof Error) {
+      return NextResponse.json({ error: err.message }, { status: 500 });
+    }
+    return NextResponse.json({ error: 'Unknown error' }, { status: 500 });
   }
 }

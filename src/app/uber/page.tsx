@@ -28,7 +28,7 @@ export default function Angebot() {
 								<p className="">sales@windoorvision.eu</p>
 							</div>
               <div className="flex flex-row gap-2 items-center py-2"><img src="/phone-call-svgrepo-com.svg" alt="phone" className="w-10 h-10" /><p className="">+48 502 024 998</p></div>
-              <div className="flex flex-row gap-2 items-center py-2"><img src="/address-svgrepo-com.svg" alt="pin" className="w-10 h-10" /><p className="">ul. Lipowa 329, 123-45 Białystok</p></div>
+              <div className="flex flex-row gap-2 items-center py-2"><img src="/address-location-map-svgrepo-com.svg" alt="pin" className="w-10 h-10" /><p className="">ul. Lipowa 329, 123-45 Białystok</p></div>
 						</div>
 					</div>
 				</div>
