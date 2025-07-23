@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Herosub from '@/components/Herosub';
 import ContactSection from '@/components/ContactSection';
+import Image from 'next/image';
 
 const blogPosts = [
   {
@@ -40,7 +41,7 @@ export default function Informationen() {
           <div className="grid md:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <div key={post.id} className="bg-gray-100 rounded-lg shadow p-4 flex flex-col items-center">
-                <img src={post.image} alt={post.title} className="w-full h-64 object-contain bg-white rounded mb-4" />
+                <Image src={post.image} alt={post.title} className="w-full h-64 object-contain bg-white rounded mb-4" />
                 <h3 className="text-lg font-semibold mb-2 text-center text-black">{post.title}</h3>
                 <p className="text-gray-700 mb-4 text-center">{post.excerpt}</p>
                 <Link href={`/informationen/${post.id}`} className="mt-auto inline-block bg-stone-950 text-white px-4 py-2 rounded hover:bg-stone-800 transition">Mehr lesen</Link>

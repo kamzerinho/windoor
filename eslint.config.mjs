@@ -10,6 +10,12 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Ignorowanie folderu .next
+  {
+    ignores: ['.next/', 'node_modules/'],
+  },
+
+  // Twoje istniejące reguły z Next.js
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 

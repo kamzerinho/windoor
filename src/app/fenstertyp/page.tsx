@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import Image from 'next/image';
 // Removed nodemailer import - not usable in client-side React/Next.js
 
 const setupTypes = [
@@ -97,7 +98,7 @@ export default function FenstertypPage() {
               >
                 <div className="w-full h-40 bg-white flex items-center justify-center rounded mb-4 border border-dashed border-gray-300 overflow-hidden">
                   {setup.image ? (
-                    <img src={setup.image} alt={setup.type} className="object-contain h-full max-w-full" />
+                    <Image src={setup.image} alt={setup.type} className="object-contain h-full max-w-full" />
                   ) : (
                     <span className="text-gray-400">Bild folgt</span>
                   )}

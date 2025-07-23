@@ -3,6 +3,7 @@ import ContactSection from "@/components/ContactSection"
 import ImageLeftTextRight from '@/components/ImageLeft'
 import TextLeftImageRight from '@/components/ImageRight'
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 export default function Angebot() {
@@ -51,7 +52,7 @@ export default function Angebot() {
 						{/* Placeholder blog posts */}
 						{[1,2,3].map((id) => (
 							<div key={id} className="bg-gray-100 rounded-lg shadow p-4 flex flex-col items-center">
-								<img src="/box-angebot.jpg" alt="Blog Post" className="w-full h-40 object-cover rounded mb-4" />
+								<Image src="/box-angebot.jpg" alt="Blog Post" className="w-full h-40 object-cover rounded mb-4" />
 								<h3 className="text-lg font-semibold mb-2">Blog Post Titel {id}</h3>
 								<Link href={`/informationen/${id}`} className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Mehr lesen</Link>
 							</div>
