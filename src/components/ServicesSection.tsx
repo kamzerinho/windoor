@@ -1,10 +1,10 @@
 // components/ServicesSection.tsx
 const services = [
-  { title: 'Kunstofffenster', desc: 'Modernisieren Sie Ihr Zuhause mit hochwertigen PVC-Fenstern - langlebig, energieeffizient und stilvoll. Genießen Sie Komfort und Einsparungen das ganze Jahr über.', link: '#' },
-  { title: 'Aluminiumfenster', desc: 'Entdecken Sie elegante, moderne Aluminiumfenster - robust, leicht und energieeffizient. Verschönern Sie Ihr Zuhause mit dauerhafter Eleganz.', link: '#' },
-  { title: 'Eingangstüren', desc: 'Sichere und stilvolle Eingangstüren, die auf Langlebigkeit und Attraktivität ausgelegt sind. Werten Sie den ersten Eindruck Ihres Hauses auf.', link: '#' },
-  { title: 'Schiebetüren', desc: 'Erleben Sie nahtloses Wohnen mit eleganten Schiebetüren - platzsparend, elegant und einfach zu bedienen. Perfekt für moderne Häuser.', link: '#' },
-  { title: 'Aluminium-Konstruktionen', desc: 'Entdecken Sie die vielseitigen Aluminiumkonstruktionen - stabil, leicht und ideal für individuelle Designs. Perfekt für private und gewerbliche Projekte.', link: '#' },
+  { title: 'Kunstofffenster', desc: 'Modernisieren Sie Ihr Zuhause mit hochwertigen PVC-Fenstern - langlebig, energieeffizient und stilvoll. Genießen Sie Komfort und Einsparungen das ganze Jahr über.', link: '/angebot/kunststoffenster' },
+  { title: 'Aluminiumfenster', desc: 'Entdecken Sie elegante, moderne Aluminiumfenster - robust, leicht und energieeffizient. Verschönern Sie Ihr Zuhause mit dauerhafter Eleganz.', link: '/angebot/aluminiumfenster' },
+  { title: 'Eingangstüren', desc: 'Sichere und stilvolle Eingangstüren, die auf Langlebigkeit und Attraktivität ausgelegt sind. Werten Sie den ersten Eindruck Ihres Hauses auf.', link: '/angebot/hausturen' },
+  { title: 'Schiebetüren', desc: 'Erleben Sie nahtloses Wohnen mit eleganten Schiebetüren - platzsparend, elegant und einfach zu bedienen. Perfekt für moderne Häuser.', link: '/angebot/schiebeturen' },
+  { title: 'Aluminium-Konstruktionen', desc: 'Entdecken Sie die vielseitigen Aluminiumkonstruktionen - stabil, leicht und ideal für individuelle Designs. Perfekt für private und gewerbliche Projekte.', link: '/informationen' },
 ];
 
 export default function ServicesSection() {
