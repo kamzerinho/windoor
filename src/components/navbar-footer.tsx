@@ -11,16 +11,16 @@ export default function Navbarfooter() {
 
       <ul className="flex items-center space-x-6 text-white-700 transition ease-in">
       <li className="relative">
-          <Link href="angebot" className="">Angebot</Link>
+          <Link href="/angebot" className="">Angebot</Link>
         </li>
         <li>
           <Link href="/" className="hover:text-gray-600 transition-colors">
-            Home
+            Startseite
           </Link>
         </li>
         <li>
-          <Link href="/about" className="hover:text-gray-600 transition-colors">
-            About
+          <Link href="/fenstertyp" className="hover:text-gray-600 transition-colors">
+            Fenstertyp
           </Link>
         </li>
       </ul>

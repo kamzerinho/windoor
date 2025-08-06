@@ -1,5 +1,6 @@
 // components/WhyUsSection.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function WhyUsSection() {
   return (
@@ -19,9 +20,7 @@ Unser Angebot umfasst energieeffiziente Fenster, Haustüren und Schiebetüren au
 Erkunden Sie unser Angebot und sehen Sie sich die Vielfalt der von uns angebotenen Fenster- und Türdesigns an. Mit einer großen Auswahl an Stilen und Farben können Sie ganz einfach die perfekte Lösung für den einzigartigen Stil und die Bedürfnisse Ihres Hauses finden.
 
             </p>
-            <button className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 transition">
-              Jetzt entdecken
-            </button>
+            <Link href={`/fenstertyp`} className="mt-auto inline-block bg-neutral-900 text-white px-4 py-2 rounded hover:bg-neutral-800 transition">Angebot Prüfen</Link>
           </div>
         </div>
 

@@ -1,13 +1,14 @@
 import Image from 'next/image'
-import {Button} from "@heroui/button";
+import Link from 'next/link'
 
 interface Props {
   imageSrc: string
   title: string
   description: string
+  link: string
 }
 
-export default function ImageLeftTextRight({ imageSrc, title, description }: Props) {
+export default function ImageLeftTextRight({ imageSrc, title, description, link }: Props) {
   return (
     <div className="flex flex-col md:flex-row items-center">
       <div className="w-full md:w-1/2">
@@ -22,8 +23,8 @@ export default function ImageLeftTextRight({ imageSrc, title, description }: Pro
       </div>
       <div className="w-full md:w-1/2 p-5">
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <p className="text-gray-700">{description}</p>
-        <div><Button className="bg-white px-[20px] py-[10px] border rounded-lg mt-5 hover:text-white hover:bg-black hover:border-color-white cursor-pointer transition ease-in" size="md">Angebot Prüfen</Button></div>
+        <p className="text-gray-700 my-[25px]">{description}</p>
+        <Link href={link} className="bg-white px-[20px] py-[10px] border rounded-lg mt-5 hover:text-white hover:bg-black hover:border-color-white cursor-pointer transition ease-in">Angebot Prüfen</Link>
       </div>
     </div>
   )

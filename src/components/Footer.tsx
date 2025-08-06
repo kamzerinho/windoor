@@ -9,7 +9,7 @@ export default function Footer() {
         <p className="text-2xl font-bold">WinDoor<span>Vision</span></p>
       </Link>
     <Navbarfooter></Navbarfooter></div>
-        <div className="flex justify-center my-2"><p>&copy; {new Date().getFullYear()} WinDoorVision Wszelkie prawa zastrzeżone.</p></div>
+        <div className="flex justify-center my-2 p-5"><p className="text-center">&copy; {new Date().getFullYear()} WinDoorVision Wszelkie prawa zastrzeżone.</p></div>
     </footer>
   )
 }

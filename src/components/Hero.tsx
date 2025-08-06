@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import {Button} from "@heroui/button";
+import Link from 'next/link';
 
 
 interface HeroProps {
@@ -25,7 +25,7 @@ export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
       <div className="absolute container mx-auto inset-0 flex flex-col justify-center text-white text-left max-sm:px-5">
         <h1 className="text-md md:text-4xl font-bold mb-4 text-left">{title}</h1>
         <p className="text-sm md:text-xl max-w-2xl text-left">{subtitle}</p>
-        <div><Button className="bg-black px-[20px] py-[6px] border rounded-lg mt-5 hover:text-black hover:bg-white hover:border-color-black cursor-pointer transition ease-in" size="md" href="/angebot">Angebot Prüfen</Button></div>
+        <div><Link href={`/angebot`} className="mt-auto inline-block bg-neutral-900 text-white px-4 py-2 rounded hover:bg-neutral-800 transition">Angebot Prüfen</Link></div>
       </div>
     </section>
   );
